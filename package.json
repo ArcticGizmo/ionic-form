@@ -1,0 +1,69 @@
+{
+  "name": "ionic-form",
+  "version": "0.0.1",
+  "description": "Simple ionic forms with validation for Vue3",
+  "scripts": {
+    "build": "npm run clean && npm run compile && npm run bundle",
+    "bundle": "rollup --config rollup.config.js",
+    "clean": "rimraf dist",
+    "compile": "npm run tsc",
+    "lint": "echo add linter",
+    "prepublishOnly": "npm run build",
+    "sync": "sh ./scripts/sync.sh",
+    "test.spec": "jest",
+    "tsc": "tsc -p ."
+  },
+  "main": "./dist/ionic-form.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArcticGizmo/ionic-form.git"
+  },
+  "keywords": [
+    "Vue",
+    "Vue3",
+    "validation",
+    "form",
+    "ionic"
+  ],
+  "author": "Jon Howell <jon.howell314@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArcticGizmo/ionic-form/issues"
+  },
+  "homepage": "https://github.com/ArcticGizmo/ionic-form#readme",
+  "dependencies": {
+    "@ionic/vue": "^6.2.9"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.1",
+    "@types/node": "^14.10.1",
+    "jest": "^28.1.1",
+    "jest-environment-jsdom": "^28.1.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.79.1",
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "rollup-plugin-vue": "^6.0.0",
+    "ts-jest": "^28.0.5",
+    "typescript": "^4.8.4",
+    "vue": "^3.2.37"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(js|ts|tsx)$": "<rootDir>/test/jest.preprocessor.js"
+    },
+    "testRegex": "(\\.(test|spec))\\.(ts?|tsx?|jsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "jsx"
+    ]
+  }
+}
